@@ -1,0 +1,353 @@
+* {
+  
+    box-sizing: border-box;    
+  
+  }
+ 
+body{
+
+  /* overflow-x: hidden; */
+  /* overflow-y: hidden; */
+  margin: 0;
+  padding: 0;
+  background-color: #8CC461;
+
+}
+  header{
+    padding-top: 25px;
+    padding-left:15%;
+    
+  }
+
+  .head-box{ 
+    width:65vw;
+    height:auto;  
+    border-radius: 3px ;
+    border: 3px solid #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    
+    
+  }
+  .head-line{
+    font-family: Roboto;
+    font-size: 30px;
+font-weight: 600;
+line-height: 18px;
+letter-spacing: 0.1em;
+text-align: left;
+color: #FFFFFF;
+
+
+
+  }
+  .score-box{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40%;
+    
+  
+  }
+  .computer-score{
+    display: flex;
+    padding: 15px ;
+     }
+   .your-score{
+    display: flex;
+    padding: 15px ;
+   }
+  .score{
+    text-align: left;
+    background-color: #FFFFFF;
+    border-radius: 5px ;
+    width:10vw;
+
+  }
+  div > p{
+    background-color: #FFFFFF;
+    font-family: Roboto;
+font-size: 18px;
+font-weight: 600;
+line-height: 19.92px;
+letter-spacing: 0.1em;
+text-align: center;
+color: #656565;
+
+
+  }
+
+  .score-count{
+    background-color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 50px;
+font-weight: 600;
+line-height: 0px;
+text-align: center;
+color: #252525;
+padding: 0px;
+
+
+  }
+
+/* Triangular Setup for Hand Icons */
+.hand-setup {
+  top:50px;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+ 
+}
+
+.triangle-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hand {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+}
+
+.hand.rock {
+  border: 11px solid #f7b444;
+  top: 200px; /* Adjust the vertical position */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hand.paper {
+  
+  top: 0;
+  left: 2%;
+  border: 11px solid #3884d9;
+}
+
+.hand.scissors {
+  border: 11px solid #b24ff5;
+  top: 0;
+  right: 2%; /* Increase this value to move Scissors further from Rock */
+  
+}
+
+
+.icon {
+    font-size: 40px;
+}
+.next-rules{
+ 
+ display: flex;
+ flex-direction: column;
+ align-items: flex-end;
+ width: 350px;
+ position: absolute;
+ right: 30px;
+ bottom: 25px;
+ position: absolute;
+}
+
+ .game-rule-box{
+    display: none;    
+  width: 78%;
+  height: 53vh;
+  background-color: #004429;
+font-family: Roboto;
+font-size: 16px;
+font-weight: 400;
+line-height: 18px;
+text-align: left;
+color: #FFFFFF;
+border: 7px solid #FFFFFF;
+border-radius: 10px;
+padding: auto;
+
+
+
+
+
+}
+.close-btn{
+    display: none;    
+  font-family: Dangrek;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 50px;
+  text-align: left;
+  color: #FFFFFF;
+  background-color: #FF0000;
+  border-radius: 50%;
+  border: 7px solid #FFFFFF;
+  position:fixed ;
+  right:25px;
+  top:220px;
+
+
+  
+}
+.game-rule-box >ul>li{
+  list-style-type: square; 
+}
+li::marker {
+  color:yellow;
+  
+}
+.game-rule-box > h1{
+font-family: Roboto;
+font-size: 30px;
+font-weight: 500;
+line-height: 33px;
+color: #FFFFFF;
+text-align: center;
+padding-top: 15px;
+}
+.rule-btn{
+
+width: 95px;
+height: 45px;
+background-color: #8CC461;
+gap: 0px;
+opacity: 0px;
+font-family: Roboto;
+font-size: 15px;
+font-weight: 500;
+line-height: 10px;
+letter-spacing: 0.1em;
+text-align: center;
+color: #FFFFFF;
+border-radius: 3px ;
+border: 3px solid #FFFFFF;
+margin: 5px;
+ }
+  .next-btn-hidden{
+    display: none;
+  width: 95px;
+height: 45px;
+background-color: #8CC461;
+gap: 0px;
+opacity: 0px;
+font-family: Roboto;
+font-size: 15px;
+font-weight: 500;
+line-height: 10px;
+letter-spacing: 0.1em;
+text-align: center;
+color: #FFFFFF;
+border-radius: 3px ;
+border: 3px solid #FFFFFF;
+
+
+  } 
+  .img-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 45px;
+  }
+  .star-container{
+    animation: fadeIn 5s;
+    
+  }
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 5; }
+  }
+  .trophy-container{
+    margin:-150px;
+  }
+  #hurray{
+  padding-top: 6%;
+  font-family: Roboto;
+font-size: 90px;
+font-weight: 600;
+line-height: 106px;
+letter-spacing: 0.1em;
+text-align: center;
+color: #FFFFFF;
+position: relative;
+
+  }
+  #p-line{
+    font-family: Roboto;
+font-size: 30px;
+font-weight: 400;
+line-height: 35px;
+letter-spacing: 0.1em;
+color: #FFFFFF;
+position: absolute;
+top:480px;
+padding-left: 38%;
+
+
+  }
+
+  .play-again{
+    color:#6B6B6B;
+    width: 150px;
+    height: 35px;
+    text-align: center;
+    padding-left: 45%;
+    font-family: Roboto;
+font-size: 15px;
+font-weight: 600;
+line-height: 17px;
+letter-spacing: 0.1em;
+border-radius: 3px ;
+border: #FFFFFF;
+
+
+
+  }
+  .choice{
+    display: flex;
+    justify-content: space-around;
+    /* border: 1px solid white; */
+    margin: 75px;
+  }
+  .your-choice {
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0.1em;
+  }
+  .comp-choice{
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 17px;
+    letter-spacing: 0.1em;
+  }
+  .game-status-box{
+    color: #FFF;
+    font-family: Roboto;
+    text-align: center;
+  }
+  #status1{
+    font-family: Roboto;
+font-size: 40px;
+font-weight: 800;
+line-height: 45.7px;
+letter-spacing: 0.1em;
+
+  }
+  #status2{
+    font-family: Roboto;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 45.7px;
+    letter-spacing: 0.1em;
+  }

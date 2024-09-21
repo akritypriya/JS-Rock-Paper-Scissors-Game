@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project-Rock-Paper-Scissor-Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="head-box">
+            <div class="head-line">
+            <ul>ROCK</ul>
+            <ul>PAPER</ul>
+            <ul>SCISSORS</ul>
+            </div>
+            <div class="score-box">
+                <div class="computer-score">
+                    <div class="score">
+                        <P class="score-headline">COMPUTER<BR>SCORE<BR></P>
+                        <p class="score-count">0</p>
+                        </div>
+                </div>
+                <div class="your-score">
+                    <div class="score">
+                        <P class="score-headline">YOUR<BR>SCORE</P>
+                        <p class="score-count">0</p>
+                        </div>
+                </div>
+            </div>
+            <div>
+        </header>
+        <main>
+                <!-- Triangular Setup for the hands (Downward Facing) -->
+                <div class="hand-setup">
+                    <svg class="triangle-lines">
+                        <!-- Base line -->
+                        <line x1="50" y1="50" x2="250" y2="50" stroke="#000000A3" stroke-width="12"/>
+                        <!-- Left line -->
+                        <line x1="50" y1="50" x2="150" y2="250" stroke="#000000A3" stroke-width="12"/>
+                        <!-- Right line -->
+                        <line x1="250" y1="50" x2="150" y2="250" stroke="#000000A3" stroke-width="12"/>
+                    </svg>
+                    <div class="hand rock">
+                        <div class="icon"><img src="PIC/paper.svg" height="50vh" width="50vw"></div>
+                    </div>
+                    <div class="hand paper">
+                        <div class="icon"><img src="PIC/rock.svg" height="50vh" width="50vw"></div>
+                    </div>
+                  
+                    <div class="hand scissors">
+                        <div class="icon"><img src="PIC/scissiors.svg" height="50vh" width="50vw"></div>
+                    </div>
+                </div>
+                <div class="next-rules">
+                    
+                    <button class="close-btn">X</button> 
+                    <div class="game-rule-box"> 
+                        <h1>Game Rules</h1>
+                        <ul>
+                            <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li><br>
+                            <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper,scissors.”</li><br>
+                            <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li><br>
+                            <li>If both players lay down the same hand, each player lays down another hand</li>
+                        </ul>
+                    </div> 
+                    <div>
+                    <button class="rule-btn">RULES</button>
+                    <button class="next-btn-hidden">NEXT</button>
+                    </div>
+                </div>
+</main>
+</body>
+</html>
