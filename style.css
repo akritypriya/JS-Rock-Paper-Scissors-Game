@@ -50,7 +50,7 @@ header {
 .your-score {
   display: flex;
   padding: 15px;
-  
+
 }
 .score {
   text-align: left;
@@ -82,7 +82,7 @@ div > p {
 
 /* Triangular Setup for Hand Icons */
 .hand-setup {
-  top: 50px;
+  top: 80px;
   position: relative;
   width: 300px;
   height: 300px;
@@ -356,6 +356,7 @@ li::marker {
   }
 }
 .trophy-container {
+  animation: fadeIn 1s;
   margin: -150px;
 }
 #hurray {
@@ -396,12 +397,16 @@ li::marker {
 /* Multiple ripple effect animation */
 @keyframes ripple-multiple {
   0% {
-    box-shadow: 0 0 0 0 #06310263, 0 0 0 20px #48cb3d63,
-      0 0 0 50px rgba(18, 82, 18, 0.3), 0 0 0 70px rgba(15, 88, 15, 0.1);
+    box-shadow: 0 0 0 0 #06310263,
+                0 0 0 20px #48cb3d63,
+                0 0 0 50px rgba(18, 82, 18, 0.3), 
+                0 0 0 70px rgba(15, 88, 15, 0.1);
   }
   100% {
-    box-shadow: 0 0 0 30px#2E9A2563, 0 0 0 50px rgba(31, 117, 31, 0),
-      0 0 0 80px rgba(40, 172, 40, 0), 0 0 0 100px rgba(6, 117, 6, 0);
+    box-shadow: 0 0 0 30px#2E9A2563,
+                0 0 0 50px rgba(31, 117, 31, 0),
+                0 0 0 80px rgba(40, 172, 40, 0),
+                 0 0 0 100px rgba(6, 117, 6, 0);
   }
 }
 
@@ -420,3 +425,4 @@ li::marker {
   height: 100%;
   border-radius: 50%;
 }
+
