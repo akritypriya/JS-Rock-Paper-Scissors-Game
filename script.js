@@ -1,6 +1,6 @@
 let cscore = document.getElementById("comp-score");
 let pscore = document.getElementById("player-score");
-let hands = document.querySelectorAll(".hand");
+const hands = document.querySelectorAll(".hand");
 const handSetup = document.querySelector(".hand-setup");
 const lines = document.querySelector(".triangle-lines");
 const resultZone = document.querySelector(".result-zone");

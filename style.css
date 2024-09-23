@@ -60,21 +60,18 @@ header {
 }
 div > p {
   background-color: #ffffff;
-
   font-size: 18px;
   font-weight: 600;
-  line-height: 19.92px;
+  line-height: 19px;
   letter-spacing: 0.1em;
   text-align: center;
   color: #656565;
 }
 
-.score-count {
-  background-color: #ffffff;
-
+div>p >.score-count {
   font-size: 50px;
+  background-color: #ffffff;
   font-weight: 600;
-  line-height: 0px;
   text-align: center;
   color: #252525;
   padding: 0px;
