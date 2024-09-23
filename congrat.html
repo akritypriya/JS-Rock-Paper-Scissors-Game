@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Winner Page</title>
+    <title>Project-Rock-Paper-Scissor-Game</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <audio id="audio" src="/Audio/mixkit-cheering-crowd-loud-whistle-610.wav"></audio>
     <div class="img-container">
-    <div class="star-container">
-        <img src="PIC/Group 5 (1).png"></div>
+    <div class="star-container"><img src="PIC/Group 5 (1).png"></div>
     <div class="trophy-container"> <img src="PIC/Vector.svg"></div>   
     </div>
     <h1 id="hurray">HURRAY!!</h1>
     <p id="p-line">YOU WON THE GAME</p>
-    <div class="play-again"><button class="play-again">PLAY AGAIN</button></div>
-    <div class="next-rules">                    
+    <button class="win-play-btn" onclick="window.location.href = 'index.html';">PLAY AGAIN</button>
+    <div class="next-rules">
         <button class="close-btn">X</button> 
         <div class="game-rule-box"> 
             <h1>Game Rules</h1>
@@ -26,10 +27,37 @@
                 <li>If both players lay down the same hand, each player lays down another hand</li>
             </ul>
         </div> 
-        <div>
-        <button class="rule-btn">RULES</button>
-        <button class="next-btn-hidden">NEXT</button>
-        </div>
+      <div>
+       <button class="rule-btn">RULES</button>
+        <a href="congrat.html"></a>
+        
+<!-- <button class="next-btn" onclick="window.location.href = 'congrat.html';">NEXT</button> -->
     </div>
-</body>
-</html>
+<script>
+    // Play the audio when the page loads
+        window.onload = function() {
+            const sound = document.getElementById('audio');
+            sound.play();
+        };
+const ruleBtn=document.querySelector(".rule-btn");
+const gameRuleBook=document.querySelector(".game-rule-box");
+const closebtn=document.querySelector(".close-btn");
+
+ruleBtn.addEventListener('click',displayRuleBook);
+
+function displayRuleBook(){
+    gameRuleBook.style.display = 'block';
+    closebtn.style.display = 'block';
+
+}
+closebtn.addEventListener('click',closeRuleBook);
+
+function closeRuleBook(){
+    gameRuleBook.style.display = 'none';
+    closebtn.style.display = 'none';
+
+}
+</script>
+
+    </body>
+    </html>
