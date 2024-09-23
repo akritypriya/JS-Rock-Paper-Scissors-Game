@@ -49,6 +49,7 @@ header {
 .your-score {
   display: flex;
   padding: 15px;
+  margin-right: 15px;
 }
 .score {
   text-align: left;
@@ -343,7 +344,7 @@ li::marker {
   margin: 45px;
 }
 .star-container {
-  animation: fadeIn 4s;
+  animation: fadeIn 2s;
 }
 @keyframes fadeIn {
   0% {
